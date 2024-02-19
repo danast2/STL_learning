@@ -6,10 +6,10 @@
 using namespace std;
 
 int main() {
-    std::vector<int> v{1, 2, 3, 2, 4, 5, 6, 7, 8};
+    std::vector<int> v{1, 2, 3, 2, 5, 2, 6, 2, 4, 8};
     //Удалим некоторые элементы. Что именно? В нашем примере много значений 2,
     //удалим их:
-    const auto new_end(remove(begin(v), end(v), 2));
+    const auto new_end = remove(begin(v), end(v), 2);
 
     //укоротим размер вектора:
     v.erase(new_end, end(v));
