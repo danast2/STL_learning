@@ -42,7 +42,7 @@ int main(){
     quick_remove_at(v, std::find(std::begin(v), std::end(v), 123));
 
     lastEl = v.back();
-
+    std::cout << '\n';
     for (auto i: v) {
         cout << i;
         if (i != lastEl) {
