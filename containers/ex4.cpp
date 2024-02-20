@@ -8,7 +8,8 @@
 using namespace std;
 
 template <class T> void insert_sorted(vector<T>& v, string& s){
-
+    const auto insert_pos (lower_bound(begin(v), end(v), s));
+    v.insert(insert_pos, s);
 }
 
 int main(){
@@ -18,5 +19,9 @@ int main(){
     assert(true == is_sorted(begin(v), end(v)));
     insert_sorted(v, (string &) "foobar");
     insert_sorted(v, (string &) "sdff");
+    for(const auto &w: v){
+        cout << w << " ";
+    }
+    cout << "\n";
 }
 
