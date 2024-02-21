@@ -29,11 +29,15 @@ int main(){
 
     for (const auto &b: billionaires) {
         auto [iterator, success] = m.try_emplace(b.country, b, 1);
+        if (!success) iterator->second.second += 1;
     }
 
-    if (!success) {
-        iterator->second.second += 1;
+    for(const auto&[key, value]: m){
+        const auto &[b, count] = value;
+        cout << b.country << " : "
+        << "billionaire. Richest is: " << b.name << " with " << b.dollars << "B$\n";
     }
+
 
     for (const auto & [key, value] : m) {
         const auto &[b, count] = value;
