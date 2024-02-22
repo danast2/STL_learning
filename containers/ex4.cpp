@@ -1,3 +1,6 @@
+//Сохраняем сортировку экземпляров
+//класса std::vector
+
 #include <iostream>
 #include <vector>
 #include <string>

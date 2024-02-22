@@ -1,3 +1,6 @@
+//Вставляем элементы в контейнер std::map
+//эффективно и в соответствии с условиями
+
 #include <iostream>
 #include <functional>
 #include <list>

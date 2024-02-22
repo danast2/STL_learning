@@ -1,3 +1,7 @@
+/*Исследуем новую семантику подсказок
+для вставки элементов с помощью
+        метода std::map::insert*/
+
 #include <iostream>
 #include <string>
 #include <map>
