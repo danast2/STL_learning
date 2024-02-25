@@ -1,3 +1,6 @@
+/*Реализуем личный список текущих дел
+        с помощью std::priority_queue*/
+
 #include <iostream>
 #include <queue>
 #include <tuple>
