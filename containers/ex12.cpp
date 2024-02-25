@@ -1,3 +1,6 @@
+//Вспомогательный стилистический редактор
+//для поиска длинных предложений в текстах
+//с помощью std::multimap
 #include <iostream>
 #include <iterator>
 #include <map>
