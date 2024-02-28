@@ -1,3 +1,5 @@
+//Создаем собственный
+//итерабельный диапазон данных
 #include <iostream>
 
 class num_iterator{
@@ -31,7 +33,7 @@ public:
 int main()
 {
     for (int i : num_range{100, 110}) {
-        std::cout << i << ", ";
+        std::cout << i << " ";
         //Создаем собственный итерабельный диапазон данных
     }
     std::cout << '\n';
