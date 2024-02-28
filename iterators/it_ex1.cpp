@@ -26,8 +26,8 @@ class num_range{
     int b;
 public:
     num_range(int from, int to): a{from}, b{to}{}
-    num_iterator begin() const { return num_iterator{a}; }
-    num_iterator end() const { return num_iterator{b}; }
+    [[nodiscard]] num_iterator begin() const { return num_iterator{a}; }
+    [[nodiscard]] num_iterator end() const { return num_iterator{b}; }
 };
 
 int main()
