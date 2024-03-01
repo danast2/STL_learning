@@ -29,3 +29,18 @@ fibit& fibit::operator++(){
     ++i;
     return *this;
 }
+
+class fib_range{
+    size_t end_n;
+public:
+    fib_range(size_t end_n_):end_n{end_n_} {}
+    fibit begin() const {return fibit{};}
+    fibit end() const {return fibit{end_n};}
+};
+
+int main(){
+    for (size_t i: fib_range(10)){
+        std::cout << i << " ";
+    }
+    std::cout << '\n';
+}
