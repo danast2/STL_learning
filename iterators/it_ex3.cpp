@@ -18,6 +18,6 @@ int main() {
     auto deque_middle(next(begin(v), static_cast<int>(v.size()) / 2));
     copy(istream_iterator<int>{sstr}, {}, inserter(v, deque_middle));
     initializer_list<int> il2{-1, -2, -3};
-    copy(begin(v), end(v), ostream_iterator<int>{cout, ", "});
+    copy(begin(v), end(v), ostream_iterator<int>{cout, " "});
     cout << '\n';
 }
