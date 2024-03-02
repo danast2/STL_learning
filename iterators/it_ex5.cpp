@@ -1,3 +1,5 @@
+//Перебор в обратную сторону с применением
+//обратных адаптеров для итераторов
 #include <iostream>
 #include <list>
 #include <iterator>
@@ -10,6 +12,6 @@ int main(){
     cout << '\n';
     copy(make_reverse_iterator(end(l)),
          make_reverse_iterator(begin(l)),
-         ostream_iterator<int>{cout, ", "});
+         ostream_iterator<int>{cout, " "});
     cout << '\n';
 }
