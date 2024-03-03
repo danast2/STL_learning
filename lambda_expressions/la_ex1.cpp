@@ -14,5 +14,16 @@ int main(){
         std::cout << counter() << " ";
     }
     std::cout << '\n';
+
+    int i {0};
+    auto incrementer ([&i] {++i;});
+    incrementer();
+    incrementer();
+    incrementer();
+
+    std::cout << "value of 'a' after 3 incrementer() calls: "<< i << '\n';
+
+    auto plus_ten ([=](int x) {return plus(10, x);});
+    std::cout << plus_ten(5) << '\n';
     return 0;
 }
