@@ -15,13 +15,11 @@ template <typename T, typename ...Ts> auto concat(T t, Ts ...ts){
 
 int main(){
 
-    auto twice ([](int i){return i * 2;});
-    auto thrice ([](int i){return i * 3;});
+    auto twice = [](int i){return i * 2;};
+    auto thrice = [](int i){return i * 3;};
 
-    twice(thrice(plus(a, b ))).
-    auto combined (
-            concat(twice, thrice, std::plus<int>{})
-    );
+    auto combined = concat(twice, thrice, std::plus<int>{});
+
     std::cout << combined(2, 3) << '\n';
     return 0;
 }
