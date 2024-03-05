@@ -6,7 +6,7 @@
 #include <functional>
 #include <algorithm>
 
-static bool begin_with_a(const std::string &s)
+static bool begins_with_a(const std::string &s)
 {
     return s.find('a') == 0;
 }
@@ -21,3 +21,11 @@ template <class A, class B, class F> auto combine(F binary_func, A a, B b){
     };
 }
 
+using namespace std;
+
+int main(){
+    auto a_xxx_b (combine(logical_and<>{}, begins_with_a, ends_with_b));
+    copy_if(istream_iterator<string>{cin}, {}, ostream_iterator<string>{cout, " "}, a_xxx_b);
+    cout << '\n';
+    return 0;
+}
