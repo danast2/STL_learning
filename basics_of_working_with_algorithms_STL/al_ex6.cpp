@@ -67,9 +67,17 @@ int main() {
         print_city(found_large);
     }
 
-    const vector<int> v {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    const std::vector<int> v {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     auto print_int (opt_print(v));
 
     bool contains_7 {binary_search(begin(v), end(v), 7)};
-    cout << contains_7 << '\n';
+    std::cout << contains_7 << '\n';
+
+    auto [lower_it, upper_it] (
+            equal_range(begin(v), end(v), 7));
+    print_int(lower_it);
+    print_int(upper_it);
+
+    print_int(lower_bound(begin(v), end(v), 7));
+    print_int(upper_bound(begin(v), end(v), 7));
 }
