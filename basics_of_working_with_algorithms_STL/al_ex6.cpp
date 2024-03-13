@@ -55,4 +55,21 @@ int main() {
         }));
         print_city(found_cologne);
     }
+
+    {
+        auto population_more_than ([](unsigned i) {
+            return [=] (const city &item) {
+                return item.population > i;
+            };
+        });
+        auto found_large (find_if(begin(c), end(c),
+        population_more_than(2000000)));
+        print_city(found_large);
+    }
+
+    const vector<int> v {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    auto print_int (opt_print(v));
+
+    bool contains_7 {binary_search(begin(v), end(v), 7)};
+    cout << contains_7 << '\n';
 }
