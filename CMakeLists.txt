@@ -7,5 +7,6 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_executable(STL
         #basics_of_working_with_algorithms_STL/al_ex5.cpp
-        basics_of_working_with_algorithms_STL/al_ex6.cpp
+        #basics_of_working_with_algorithms_STL/al_ex6.cpp
+        basics_of_working_with_algorithms_STL/al_ex7.cpp
 )
